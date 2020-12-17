@@ -1,0 +1,19 @@
+name: Test
+on:
+  workflow_dispatch:
+    inputs:
+      firstName:
+        description: 'First Name'
+        required: true
+      lastName:
+        description: 'Last Name'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo ${{github.event.inputs.firstName}}
+          echo ${{github.event.inputs.lastName}}
