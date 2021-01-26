@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: Echo
         run: |
-          commandThatDoesNotExist
+          x=$(commandThatDoesNotExist)
           echo ${{github.event.inputs.firstName}}
           echo ${{github.event.inputs.lastName}}
