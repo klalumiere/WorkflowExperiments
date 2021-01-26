@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo
-        shell: pwsh
+        shell: python
         run: |
-          Write-Host "${{github.event.inputs.firstName}}"
-          Write-Host "${{github.event.inputs.lastName}}"
+          import sys
+          print(sys.version)
+          print("${{github.event.inputs.firstName}}")
+          print("${{github.event.inputs.lastName}}")
