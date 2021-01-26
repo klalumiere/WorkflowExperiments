@@ -14,9 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo
-        shell: python
+        shell: pwsh
         run: |
-          print("${{github.event.inputs.firstName}}")
-          print("${{github.event.inputs.lastName}}")
-          x = 1 + 1
-          print(x)
+          Write-Host "${{github.event.inputs.firstName}}"
+          Write-Host "${{github.event.inputs.lastName}}"
