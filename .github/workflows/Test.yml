@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo
+        shell: python
         run: |
-          set -e
-          x=$(commandThatDoesNotExist | ls)
-          echo ${{github.event.inputs.firstName}}
-          echo ${{github.event.inputs.lastName}}
+          print(f"${{github.event.inputs.firstName}}, { 1 + 1 }")
+          print(f"${{github.event.inputs.lastName}}, { 1 + 1 }")
