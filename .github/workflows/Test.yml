@@ -16,5 +16,7 @@ jobs:
       - name: Echo
         shell: python
         run: |
-          print(f"${{github.event.inputs.firstName}}, { 1 + 1 }")
-          print(f"${{github.event.inputs.lastName}}, { 1 + 1 }")
+          print("${{github.event.inputs.firstName}}")
+          print("${{github.event.inputs.lastName}}")
+          x = 1 + 1
+          print(x)
