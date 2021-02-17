@@ -20,7 +20,7 @@ jobs:
     needs: safe_space
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@782e5ae9ea8551dd997e5c4dd22499cb62797251
         with:
           name: public-artifact
       - run: |
