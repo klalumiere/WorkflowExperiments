@@ -1,13 +1,6 @@
 name: Test
 on:
-  workflow_dispatch:
-    inputs:
-      firstName:
-        description: 'First Name'
-        required: true
-      lastName:
-        description: 'Last Name'
-        required: true
+  push
 
 jobs:
   safe_space:
