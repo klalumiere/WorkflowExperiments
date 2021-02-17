@@ -12,16 +12,17 @@ jobs:
           echo snow > kind_of_public.txt
       - uses: actions/upload-artifact@v2
         with:
-          name: public-stuff
+          name: public-artifact
           path: |
             **/*public*
 
   uses_third_party_actions:
+    needs: safe_space
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: public-stuff
+          name: public-artifact
       - run: |
           ls
           cat kind_of_public.txt
